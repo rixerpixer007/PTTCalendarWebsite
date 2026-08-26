@@ -2,9 +2,39 @@ import Link from 'next/link';
 import { siteConfig } from './site-config';
 
 const steps = [
-	['Write', 'Plan tomorrow beneath your chosen heading in today’s Obsidian daily note.'],
-	['Preview', 'Run the plugin command and check every calculated start and end time before anything is sent.'],
-	['Create', 'Explicitly approve the preview to create the schedule in your selected Google Calendar.'],
+	{
+		title: 'Write',
+		description: 'Plan tomorrow beneath your chosen heading in today’s Obsidian daily note.',
+		icon: 'Aa',
+		meta: 'Daily note',
+	},
+	{
+		title: 'Preview',
+		description: 'Run the plugin command and check every calculated start and end time before anything is sent.',
+		icon: '✓',
+		meta: 'Review first',
+	},
+	{
+		title: 'Create',
+		description: 'Explicitly approve the preview to create the schedule in your selected Google Calendar.',
+		icon: '+',
+		meta: 'Google Calendar',
+	},
+];
+
+const principles = [
+	{
+		title: 'No automatic calendar changes.',
+		description: 'Events are created only after you review the preview and explicitly approve it.',
+	},
+	{
+		title: 'No developer-operated server.',
+		description: 'The plugin connects directly from Obsidian to Google’s OAuth and Calendar services.',
+	},
+	{
+		title: 'No analytics or advertising.',
+		description: 'The plugin does not track usage, sell data, or send your plan to the developer.',
+	},
 ];
 
 export default function Home() {
@@ -26,11 +56,17 @@ export default function Home() {
 				<div className="shell">
 					<p className="section-label">A deliberate workflow</p>
 					<div className="step-grid">
-						{steps.map(([title, description], index) => (
-							<article className="step-card" key={title}>
-								<span className="step-number">0{index + 1}</span>
-								<h2>{title}</h2>
-								<p>{description}</p>
+						{steps.map((step, index) => (
+							<article className="step-card" key={step.title}>
+								<div className="step-card-top">
+									<span className="step-number">0{index + 1}</span>
+									<span className="step-icon" aria-hidden="true">{step.icon}</span>
+								</div>
+								<div className="step-copy">
+									<h2>{step.title}</h2>
+									<p>{step.description}</p>
+								</div>
+								<span className="step-meta">{step.meta}</span>
 							</article>
 						))}
 					</div>
@@ -43,12 +79,14 @@ export default function Home() {
 					<h2>Your plan stays under your control.</h2>
 				</div>
 				<div className="principle-list">
-					<p><strong>No automatic calendar changes.</strong> Events are created only after you review the preview and explicitly approve it.</p>
-					<p><strong>No developer-operated server.</strong> The plugin connects directly from Obsidian to Google’s OAuth and Calendar services.</p>
-					<p><strong>No analytics or advertising.</strong> The plugin does not track usage, sell data, or send your plan to the developer.</p>
+					{principles.map((principle, index) => (
+						<article className="principle" key={principle.title}>
+							<span className="principle-number" aria-hidden="true">0{index + 1}</span>
+							<p><strong>{principle.title}</strong>{principle.description}</p>
+						</article>
+					))}
 				</div>
 			</section>
 		</main>
 	);
 }
-
