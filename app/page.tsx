@@ -5,19 +5,16 @@ const steps = [
 	{
 		title: 'Write',
 		description: 'Plan tomorrow beneath your chosen heading in today’s Obsidian daily note.',
-		icon: 'Aa',
 		meta: 'Daily note',
 	},
 	{
 		title: 'Preview',
 		description: 'Run the plugin command and check every calculated start and end time before anything is sent.',
-		icon: '✓',
 		meta: 'Review first',
 	},
 	{
 		title: 'Create',
 		description: 'Explicitly approve the preview to create the schedule in your selected Google Calendar.',
-		icon: '+',
 		meta: 'Google Calendar',
 	},
 ];
@@ -58,10 +55,7 @@ export default function Home() {
 					<div className="step-grid">
 						{steps.map((step, index) => (
 							<article className="step-card" key={step.title}>
-								<div className="step-card-top">
-									<span className="step-number">0{index + 1}</span>
-									<span className="step-icon" aria-hidden="true">{step.icon}</span>
-								</div>
+								<span className="step-number">0{index + 1}</span>
 								<div className="step-copy">
 									<h2>{step.title}</h2>
 									<p>{step.description}</p>
