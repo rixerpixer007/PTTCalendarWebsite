@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { siteConfig } from './site-config';
 
 const steps = [
 	{
@@ -41,7 +40,7 @@ export default function Home() {
 				<div className="eyebrow"><span /> Obsidian to Google Calendar</div>
 				<h1>Tomorrow’s plan,<br /><em>placed with intention.</em></h1>
 				<p className="hero-copy">
-					{siteConfig.name} is a focused Obsidian plugin that converts a structured daily plan into a clear preview, then creates the approved schedule in Google Calendar.
+					Plan in Obsidian. Preview your day. Approve it for Google Calendar.
 				</p>
 				<div className="hero-actions">
 					<a className="button" href="#how-it-works">How it works</a>
