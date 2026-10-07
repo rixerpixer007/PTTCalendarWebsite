@@ -52,9 +52,9 @@ h1 em { color: var(--accent); font-weight: 400; }
 .step-meta { margin-top: auto; padding: 5px 10px; border: 1px solid #345b4c; border-radius: 5px; color: var(--accent); background: rgba(101, 214, 176, .035); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; line-height: 1.5; }
 .principles { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(48px, 7vw, 92px); align-items: start; padding-block: 104px; }
 .principles h2 { max-width: 520px; margin: 15px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(40px, 4vw, 56px); font-weight: 400; letter-spacing: -.045em; line-height: 1.04; text-wrap: balance; }
-.principle { display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.principle { display: grid; grid-template-columns: 56px minmax(0, 1fr); align-items: center; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--line); }
 .principle:first-child { padding-top: 2px; }
-.principle-number { display: grid; width: 32px; height: 32px; place-items: center; border: 1px solid #315246; border-radius: 50%; color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; }
+.principle-number { display: grid; width: 56px; height: 56px; place-items: center; border: 1px solid #38725f; border-radius: 50%; background: rgba(101, 214, 176, .035); color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 24px; font-weight: 600; letter-spacing: -.065em; line-height: 1; font-variant-numeric: tabular-nums; }
 .principle-list p { margin: 0; color: var(--muted); }
 .principle-list strong { display: block; margin-bottom: 4px; color: var(--ink); }
 footer { border-top: 1px solid var(--line); color: var(--faint); }
