@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = { alternates: { canonical: '/' } };
 
 const steps = [
 	{
@@ -24,12 +27,12 @@ const principles = [
 		description: 'Events are created only after you review the preview and explicitly approve it.',
 	},
 	{
-		title: 'No developer-operated server.',
-		description: 'The plugin connects directly from Obsidian to Google’s OAuth and Calendar services.',
+		title: 'Simple Google sign-in.',
+		description: 'A small hosted helper connects your account. Plans and calendar events go directly between Obsidian and Google.',
 	},
 	{
 		title: 'No analytics or advertising.',
-		description: 'The plugin does not track usage, sell data, or send your plan to the developer.',
+		description: 'Your Google data is used for the calendar features you request, with no advertising or product-analytics trackers.',
 	},
 ];
 

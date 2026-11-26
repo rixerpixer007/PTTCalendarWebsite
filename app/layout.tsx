@@ -4,6 +4,8 @@ import './globals.css';
 import { siteConfig } from './site-config';
 
 export const metadata: Metadata = {
+	metadataBase: new URL(`https://${siteConfig.domain}`),
+	robots: { index: true, follow: true },
 	title: {
 		default: siteConfig.name,
 		template: `%s | ${siteConfig.name}`,

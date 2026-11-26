@@ -3,6 +3,7 @@ import { siteConfig } from '../site-config';
 
 export const metadata: Metadata = {
 	title: 'Terms of service',
+	alternates: { canonical: '/terms/' },
 	description: `Terms for using ${siteConfig.name}.`,
 };
 
@@ -12,7 +13,7 @@ export default function TermsOfService() {
 			<header className="legal-header">
 				<p className="section-label">Terms</p>
 				<h1>Terms of service</h1>
-				<p>These terms apply when you use {siteConfig.name}, a personal productivity plugin for Obsidian and Google Calendar.</p>
+				<p>These terms apply when you use {siteConfig.name}, a personal productivity plugin for Obsidian and Google Calendar, and its hosted sign-in helper.</p>
 			</header>
 
 			<div className="legal-content">
@@ -28,7 +29,7 @@ export default function TermsOfService() {
 
 					<section>
 						<h2>What the plugin provides</h2>
-						<p>The plugin parses a supported daily-plan format, displays a preview, and can create the approved events in a Google Calendar you select. Features and supported formats may change as the plugin develops.</p>
+						<p>The plugin parses a supported daily-plan format, displays a preview, and can create the approved events in a Google Calendar you select. A hosted helper supports Google authorization and access renewal; its data handling is described in the privacy policy. Features and supported formats may change as the plugin develops.</p>
 					</section>
 
 					<section>
@@ -48,7 +49,7 @@ export default function TermsOfService() {
 
 					<section>
 						<h2>Availability and warranty</h2>
-						<p>The plugin is provided “as is” and “as available,” without warranties of uninterrupted operation, compatibility, accuracy, or fitness for a particular purpose. You remain responsible for checking your calendar and maintaining appropriate backups.</p>
+						<p>The plugin is provided “as is” and “as available,” without warranties of uninterrupted operation, compatibility, accuracy, or fitness for a particular purpose. Sign-in and calendar actions depend on Google, Cloudflare, Obsidian, and network availability. You remain responsible for checking your calendar and maintaining appropriate backups.</p>
 					</section>
 
 					<section>
